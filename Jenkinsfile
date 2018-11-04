@@ -1,4 +1,23 @@
-Jenkinsfile (Scripted Pipeline)
-node { 
-    echo 'Hello World' 
+#!/usr/bin/env groovy Jenkinsfile
+#Jenkinsfile (Declarative Pipeline)
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
 }
